@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Method</title>
+  </head>
+  <body>
+    <script>
+      let myString = "Hi , I am Udit Kundu , a begginer coder.";
+      //String method
+
+      // String method is not changing the real string 
+      
+      console.log(myString);
+      console.log(myString.concat("This is concatination part")); //concat
+      console.log(myString.length); //length
+      console.log(myString[5]); //indexing
+      console.log(myString.charAt(5)); //same as previous line
+      console.log(myString.toLowerCase()); // to make lower case
+      console.log(myString.toUpperCase()); // to  make all uppercase
+      console.log(myString.indexOf("I")); // to know the first occurance of
+      console.log(myString.lastIndexOf("i")); // to know the last index of
+      console.log(myString.includes("U")); //return bollean is the letter is in the str or not
+      console.log(myString.endsWith("U")); //return bollean is the str endswith the  str or not
+      console.log(myString.slice(0, 5)); // here print indexes of 0 to 4
+      console.log(myString.replace("hi", "Bye")); //replace by 'bye'
+      console.log(myString.split(",")); //Here it split the string where is
+
+      let myHtml = `
+            <h1>My Html<h1/>
+            ${myString}
+            <li>Home<li/>
+            <li>About<li/>
+            <li>Contact<li/>
+                <hr/>
+        `;
+      // Editing the inner html
+      document.body.innerHTML = myHtml;
+    </script>
+  </body>
+</html>

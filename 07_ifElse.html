@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If Else Statement</title>
+  </head>
+  <body>
+    <script>
+      //IF ELSE LADDER
+      let age = 28;
+      if (age == 18) {
+        console.log("Your age is 18");
+      } else if (age === 28) {
+        console.log("Your age is 28"); // '===' is use to cheeck the value and datatype is equal or not .
+      } else {
+        console.log("I can't tell you age properly");
+      }
+      //cheeking a variable is exist or not
+      let vari = 73;
+      if (typeof vari !== "undefined") {
+        console.log("Your variable is not exist");
+      } else {
+        console.log("Your variable is  exist");
+      }
+
+      let canDrive = true;
+      if (canDrive) {
+        console.log("You can drive");
+      } else {
+        console.log("You can't drive");
+      }
+
+      //Shortcut
+      console.log(age == 45 ? "Age is 45" : "Age is not 45");
+
+      //Switch statement
+
+      switch (age) {
+        case 18:
+          console.log("You are 18");
+          break;
+
+        case 28:
+          console.log("You are 28");
+          break;
+
+        case 38:
+          console.log("You are 38");
+          break;
+
+        default:
+          console.log("You are unknown age");
+          break;
+      }
+    </script>
+  </body>
+</html>
