@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Conversion & Coercion</title>
+  </head>
+  <body>
+    <script>
+      // Type Conversion
+      let num1 = 23;
+      console.log(typeof num1);
+      let num2 = String(num1);
+      console.log(typeof num2);
+
+      let str1 = "49";
+      console.log(typeof(str1));
+      let str2 = Number(str1);
+      console.log(typeof(str2));
+
+      let myArr = [1,34,5,5,6,6,];
+      console.log(typeof(myArr));
+      let num = Number(myArr);
+      console.log(typeof(num));
+      console.log(num);   //It can't print because this can't convert in to a num
+
+      let num3 = 40.34;
+      console.log(parseInt(num3));   //It print the intiger value
+      console.log(parseFloat(num3));
+      console.log(num3.toFixed(3));   //It means 3 decimal number print after num3
+
+      // Type corection 
+      n = 23;
+      s = "34";
+      console.log(n+s , typeof(n+s));    // It follow string concadination not plus operator so output is "2334"as a str
+    </script>
+  </body>
+</html>
