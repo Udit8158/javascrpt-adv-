@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function & Scope</title>
+  </head>
+  <body>
+    <script>
+      function greet(name, greetingSpeech = "Happy Coding") {
+        // Here greetingSpeech has default value
+        console.log(
+          `Hi,${name} ${greetingSpeech} hope you are well bye see you`
+        );
+      }
+      greet("Udit");
+      greet("Harry", "Happy BirthDay");
+
+      let myArray = [3, 45, , 677, 5, 4];
+      myArray.forEach(function (elment, index) {
+        console.log(elment, index);
+      });
+
+      //Scope 
+      // var vari = 34;
+      let vari = 34;
+      function cheeckScope() {
+        var vari = 45;   //It changes the value of vari only in this block
+        // vari = 45 ;     //It changes the value of vari permenantly
+        console.log(vari);
+      }
+      cheeckScope();
+      console.log(vari);
+    </script>
+  </body>
+</html>

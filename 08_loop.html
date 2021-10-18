@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+        //There are 3 types of loop - while,for,dowhile
+        
+        // For loop 
+        // printing numbers from 0 to 10
+
+        // for (let index = 0; index<=10; index++) {
+        //     console.log(index);
+        // }
+
+        //printing the elements of an array
+        //for-each
+
+        let myArray = [3,4,5,6,6,3,2,1];
+        myArray.forEach(element => {
+            console.log(element)
+        });
+
+        // for-of 
+        
+        for (const i of myArray) {
+            console.log(i)
+        }
+        
+        // printing the Object
+        let employee = {
+            name : "Udit",
+            age : 23,
+            dist : "Delhi"
+        }
+
+        for (const key in employee) {
+            console.log(`The ${key} of employee is ${employee[key]}`)
+        }
+
+        //While Loop
+
+        let n = 0
+        while (n<=10) {
+            console.log(n);
+            n++
+        }
+
+        //dO WHILE
+        
+        let j = 20;
+        do {
+            
+            console.log(j);   //It must print atleast one time
+            j++;
+        } while (j<=10);
+
+        //Break and Continue statement 
+
+        let num = 0;
+        for (let num = 0; num <= 10; num++) {
+            const element = num;
+            console.log(num);
+            if (num == 4){
+                console.log("It is now 4")
+                // continue
+                break         //It is now break
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
