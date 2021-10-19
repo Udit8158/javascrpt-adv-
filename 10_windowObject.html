@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Window Object</title>
+  </head>
+  <body>
+    <script>
+      // Alert,Prompt,confirm
+      // alert("This is warnign");
+
+      // let userAge = prompt("What is your age");
+      // console.log("User's age is ",userAge);
+
+      // let confirmValue = confirm("Are you sure to delete this ? ");
+      // console.log(confirmValue);
+
+      //Window Object - The window object represents an open window in a browser.
+
+      let windowObject = Window;
+      console.log(windowObject);
+      //   It has many functions and methods
+      //   location method
+        console.log(location); // gives the present site url
+        console.log(location.toString()) // give url as a string
+        console.log(location.href = '//github.com');  // take me to github.com
+        console.log(history); // show the history   we can also use these method by window.history because these all are window funciton
+        console.log(history.go(-1));  // take me to the previous site
+      // Document
+
+      console.log(document); // this is a html document
+    </script>
+  </body>
+</html>
