@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link Filter</title>
+  </head>
+  <body>
+      <h1>Our Links</h1>
+    <a href="https://google.com" target="">Google</a>
+    <a href="https://facebook.com" target="">Facebook</a>
+    <a href="https://gpay.com" target="">Gpay</a>
+    <a href="https://godady.com" target="">GoDady</a>
+
+    <script>
+        let links = document.links;
+        console.log(links);
+
+        let linksArray = [
+            links[0],
+            links[1],
+            links[2],
+            links[3],
+    ];
+        console.log(linksArray);
+        if ("g" in links[0]){
+            console.log(links[0]);
+        }
+        else {
+            console.log("")
+        }
+        console.log(links[0]);
+    </script>
+  </body>
+</html>
