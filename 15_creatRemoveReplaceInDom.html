@@ -7,7 +7,7 @@
     <title>Create Remove And Replace Element In DOM</title>
 </head>
 <body>
-    <h1>This is our DOM Manupulation</h1>
+    <h1 id="h1">This is our DOM Manupulation</h1>
     <nav class="navbar">
         <ul id="list">
             <li id="allList1">Home</li>
@@ -42,6 +42,26 @@
         //Now add the new list in the all list
         let list = document.querySelector('#list');
         list.appendChild(newLi);   // Successfully append
+
+        //REPLACING AN ELEMENT
+
+        // creating a replaceable  element 
+        let repElement = document.createElement('li');
+        repElement.innerHTML = 'Contact Us';
+        repElement.id = 'replaceableElement';
+        console.log(repElement);
+        
+        
+        let Contact = document.getElementById('allList4');
+        list.replaceChild(repElement,Contact);   // Actually we make a replace on #list
+
+        //REMOVING AN ELEMENT
+        let content = document.getElementById('allList3');
+        list.removeChild(content);
+        // document.removeChild(document.getElementById('h1'))   //We can't do this ..........
+        console.log(content);
+        repElement.removeAttribute('id');  //Removing Id of the element
+        
     </script>
 </body>
 </html>
