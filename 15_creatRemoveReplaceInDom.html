@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Remove And Replace Element In DOM</title>
+</head>
+<body>
+    <h1>This is our DOM Manupulation</h1>
+    <nav class="navbar">
+        <ul id="list">
+            <li id="allList1">Home</li>
+            <li id="allList2">About</li>
+            <li id="allList3">Content</li>
+            <li id="allList4">Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque nam accusantium quasi dolore eaque quos necessitatibus, repellendus voluptas nulla expedita a id molestias molestiae. Amet atque saepe dolores quos!</div>
+
+        <div id="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque nam accusantium quasi dolore eaque quos necessitatibus, repellendus voluptas nulla expedita a id molestias molestiae. Amet atque saepe dolores quos!</div>
+    </div>
+
+    <script>
+        //CREATING A NEW ELEMENT
+        
+        console.log('Welcome');
+        let newLi = document.createElement('li');  // Creating a li element
+        let newLiTextNode = document.createTextNode('New List Item');  // Creating a text node for li
+        newLi.appendChild(newLiTextNode);  // Add the text node to li
+
+        newLi.className = 'list'; // creating a class
+        newLi.id = 'allList5';   // setting a id 
+        newLi.setAttribute('title','myTitle'); // setting attribute
+
+        // We can also do 
+        // newLi.innerText = 'New List Item';  //Here we can write only text node
+        // newLi.innerHTML = '<b>New List Item<b/>'  //Here we can write text with html tag
+        console.log(newLi);
+
+        //Now add the new list in the all list
+        let list = document.querySelector('#list');
+        list.appendChild(newLi);   // Successfully append
+    </script>
+</body>
+</html>

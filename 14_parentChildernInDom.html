@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Childern In DOM</title>
+</head>
+<body>
+    <h1>This is our DOM Manupulation</h1>
+    <nav class="navbar">
+        <ul id="list">
+            <li id="allList1">Home</li>
+            <li id="allList2">About</li>
+            <li id="allList3">Content</li>
+            <li id="allList4">Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque nam accusantium quasi dolore eaque quos necessitatibus, repellendus voluptas nulla expedita a id molestias molestiae. Amet atque saepe dolores quos!</div>
+
+        <div id="box2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque nam accusantium quasi dolore eaque quos necessitatibus, repellendus voluptas nulla expedita a id molestias molestiae. Amet atque saepe dolores quos!</div>
+    </div>
+    <script>
+        console.log("Welcome");
+        console.log(document.all);
+        console.log(document.querySelector('#list'));
+        // let container = document.getElementsByClassName('container');
+        // console.log(container);
+
+        let container = document.querySelector('.container');
+        console.log(container);
+        console.log(container.childElementCount);
+        console.log(container.childNodes);    // text means spaces and other stuff.
+        console.log(container.childNodes[1].nodeName);  // It gives the element name
+        console.log(container.childNodes[1].nodeType);  // It gives the element type
+
+        // Here remember the type name 
+        // 1. Element
+        // 2. Attribute
+        // 3. Text Node 
+        // 8. Comment 
+        // 9. Document 
+        // 10. Doctype 
+
+        console.log(container.children);     // It gives only element not text or comment or other useless stuff.
+        console.log(container.firstChild);    // It gives first child it could be text or commnet or other stuff.
+        console.log(container.firstElementChild);  // It gives first element .
+        console.log(container.lastElementChild);   // It gives the last element of container class.
+       
+        // Another Stuff 
+        let body = document.body;
+        console.log(body.parentElement);  // It prints the name of parent element name
+        console.log(body.children[1].children[0].children);  // We can also access element by this like a chain.
+    </script>
+</body>
+</html>
