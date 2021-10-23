@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage & Session Storage</title>
+</head>
+<body>
+    <h1>Different Storages</h1>
+
+    <script>
+        //Local Storage - it stored permenently 
+        let myArray = [2,4,5,'hi'];
+        // Add element in a local storage 
+
+        localStorage.setItem('name','Udit');
+        localStorage.setItem('age','17');
+        localStorage.setItem('hoby','coding');
+        localStorage.setItem('arr',JSON.stringify(myArray));    //add an array
+
+        //Getting an item
+        console.log(localStorage.getItem('hoby')); 
+        let name = JSON.parse(localStorage.getItem('arr'));    //Return as an array
+        console.log(name);
+
+        //Remove an item
+        localStorage.removeItem('Name');
+        localStorage.clear();  //to clear all item
+
+        //Session Storage - it stored only for a session  (same formuals as local)
+        sessionStorage.setItem('Session1','Hi')
+        sessionStorage.setItem('Session2','Bye');
+
+        sessionStorage.removeItem('Session1');
+        console.log(sessionStorage.getItem('Session2'));
+    </script>
+</body>
+</html>
