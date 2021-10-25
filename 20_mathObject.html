@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Object</title>
+</head>
+<body>
+    <script>
+        console.log('Welcome in Math object tutorial in js');
+        let a = 3;
+        let b = 5;
+        console.log(Math);  //Printing  all possibilities in math object
+
+        //Here I overwrite the value of z to ignore writing the log for multitple time.
+
+        let z = Math.E;   // value of e
+        z = Math.log(2);  //value of log(2);
+        z = Math.abs(-45); // absolute value of -45
+        z = Math.PI;
+        z = Math.max(3,4,5); //printing the max vlue
+        z = Math.min(3,4,5); //printing the min vlue
+        z = Math.round(4.3); //print 4
+        z = Math.ceil(4.3); //print 5
+        z = Math.floor(4.3); //print 4
+        z = Math.floor(-4.3); //print -5
+        z = Math.sqrt(49);  //squareroot
+        z = Math.pow(5,3)  //means 5 ki power 3
+        console.log(z);
+
+        // Generation Random number in JS
+        let random = Math.random();
+        console.log(random);   //It generate a random number btw 0 to  1 in float form
+
+        console.log(Math.round(random))  //It print 0 and 1 randomly
+
+
+        // Random Number btw a to b
+        // Formula: a+(b-a)*Math.random()
+        // random btw 2 to 10
+        console.log(Math.ceil((2+8*random)));  //round up 
+    </script>
+</body>
+</html>

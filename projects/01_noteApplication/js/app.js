@@ -7,8 +7,8 @@ addBtn.addEventListener('click',function(e){
     let addTxt = document.getElementById('addTxt');
     let notes = localStorage.getItem('notes');
     if (notes == null){
-        console.log('none');
-        notesObj = [];   // form a new array called 'noteObj'
+        // console.log('none');
+        notesObj = [];   // form a new empty array called 'noteObj'
     }
     else {
         notesObj = JSON.parse(notes);   //convert into an array
