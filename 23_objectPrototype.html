@@ -28,13 +28,25 @@
         }
         let emp1 = new NewEmployee('Jhon',25);
         
+        //Get Values
+        
         NewEmployee.prototype.getName = function(){
             return this.name;
         }
+        console.log(emp1);
+        console.log(emp1.getName());
+
+        //Set The Values
+
         NewEmployee.prototype.setName = function(newName){
             this.name = newName;
         }
-        console.log(emp1);
+        NewEmployee.prototype.setAge = function(newAge ){
+            this.age = newAge;
+        }
+        emp1.setName("Udit");  //Changing Name
+        emp1.setAge(30);  //Changing Age
+        console.log(emp1);  
 
     </script>
 </body>
