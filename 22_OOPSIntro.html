@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPS Intro IN JS</title>
+</head>
+<body>
+    <h1>Starting OOPS</h1>
+
+    <script>
+        //Making an object 
+        let employee = {
+            name : "Udit",
+            salary : "45LPA",
+            work : function (){
+                console.log(`${employee.name} is an Web Developer`)
+            }
+        }
+        console.log(employee.name);
+        console.log(employee.work());
+
+        // OOPS start 
+        // Making object by constractor
+
+        function genereteNewEmployee(givvenName,givvenSalary){
+            this.name = givvenName;
+            this.salary = givvenSalary;
+            this.work = function () {
+                console.log(`${employee.name} is an Web Developer`);
+            }
+        }
+        //Generate new employes with the help of constractor  with the help of 'new' keyword.
+
+        employee1 = new genereteNewEmployee("Udit",'60LPA');
+        console.log(employee1);
+
+        console.log(employee1.work());
+        employee2 = new genereteNewEmployee("Harry",'70LPA');
+        console.log(employee2);
+
+        employee3 = new genereteNewEmployee("Ramu",'50LPA');
+        console.log(employee3);
+
+    </script>
+</body>
+</html>

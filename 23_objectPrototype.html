@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Prototype</title>
+</head>
+<body>
+    <h1>Object Prototype</h1>
+    <script>
+        //Making object in normal way  (In this case we can't edit the protype of our created obj)
+        let employee = {
+            name : "Udit",
+            salary : "45LPA",
+            work : function (){
+                console.log(`${employee.name} is an Web Developer`)
+            }
+        }
+        console.log(employee);
+
+        //Making object using object constractor   (In this case we can edit the protype of our created obj)
+        //And remember it that we should only edit the prototype of our self-made object 
+
+        function NewEmployee(givvenName,givvenAge){
+            this.name = givvenName;
+            this.age = givvenAge;
+        }
+        let emp1 = new NewEmployee('Jhon',25);
+        
+        NewEmployee.prototype.getName = function(){
+            return this.name;
+        }
+        NewEmployee.prototype.setName = function(newName){
+            this.name = newName;
+        }
+        console.log(emp1);
+
+    </script>
+</body>
+</html>
