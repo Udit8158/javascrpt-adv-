@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES 6 CLASS</title>
+</head>
+<body>
+    <script>
+        //ES 6 class in modern js
+
+        //Making Object 
+        let date = new Date();
+        let year = date.getFullYear();
+        class Employee {
+            constructor (givvenCompanyName,givvenName,givvenAge,givvenExperience){
+                this.companyName = givvenCompanyName;
+                this.name = givvenName;
+                this.age = givvenAge;
+                this.experience = givvenExperience;
+            }
+            slogan(){
+                return `${this.companyName} is the best company I am ${this.name}`;
+            }
+            joiningYear(){
+                return `Joining year of ${this.name} is ${year - this.experience}`;
+            }
+            static add(a,b){
+                return a+b;      //It is access by Employee   but others are only accessded by objects of Employee.
+            }
+        }
+        let employee1 = new Employee("Google","Udit",22,2);
+        console.log(employee1);
+        console.log(employee1.joiningYear());  //and so on ...........
+
+        //Now inherit it 
+
+        class Programmer extends Employee{
+            constructor(givvenCompanyName,givvenName,givvenAge,givvenExperience,givvenLanguage){
+                super(givvenCompanyName,givvenName,givvenAge,givvenExperience);    //Inheriting from Employee
+                this.ProgrammingLanguage = givvenLanguage;
+            }
+        }
+        //Now Programmer have all information of Employee.
+
+        let Programmer1 = new Programmer("Google","Udit",22,4,"JavaScript");
+        console.log(Programmer1);
+        console.log(Programmer1.joiningYear());
+    </script>
+</body>
+</html>

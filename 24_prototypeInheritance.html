@@ -1,21 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Prototype Inheritance</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Prototype Inheritance</h1>
 
     <script>
-        console.log("Welcome");
+      console.log("Welcome");
 
-        function objectCreate(name,salary,work) {
-            this.Name = name;
-            this.Salary = salary
-        }
+      function objectCreate(name, salary, work) {
+        this.Name = name;
+        this.Salary = salary;
+        this.work = work;
+      }
+      let employee1 = new objectCreate("Udit", 34342, "Programmer");
+      console.log(employee1);
+
+      // Another Method To Do It
+
+      let makeEmployee = {
+        name: "Udit",
+        salary: 3434343,
+        slogan: function () {
+          return `This company is the best`;
+        },
+        changeName: function (newName) {
+          this.name = newName;
+        },
+      };
+      let anotherEmployee = Object.create(makeEmployee);
+      console.log(anotherEmployee);
+      anotherEmployee.changeName("Harry");
+      console.log(anotherEmployee);
+
+      //Inheritance
+
+      //parent obj
+      function Employee(givvenName, givvenAge) {
+        this.name = givvenName;
+        this.age = givvenAge;
+      }
+      Employee.prototype.slogan = function () {
+        return `This is the best company regards ${this.name}.`;
+      };
+
+      let emp1 = new Employee("Udit", 22);
+      console.log(emp1);
+      console.log(emp1.slogan());
+
+      //Child obj
+
+      function Programmer(name, age) {
+        Employee.call(this, name, age);
+      }
+      Programmer.prototype = Object.create(Employee.prototype); //Manually call add the prototype of parent obj
+      let prog1 = new Programmer("Jit", 24);
+      console.log(prog1);
+      console.log(emp1.slogan());
+
+
+      //Practice   
+
+      function floorMaker(floorCompanyName,waterQuantity,saltQuantity){
+        this.floorCompany = floorCompanyName;
+        this.water = waterQuantity;
+        this.salt = saltQuantity;
+      }
+      floorMaker.prototype.productDetatls = function(){
+        return `This is our floor of company ${this.company}`
+      }
+
+      let floor =new floorMaker("Ganesh",'2l','3 spoon');
+      console.log(floor);
+
+      // let's inheriate 
+      function cakeMaker(cakeCompanyName,sugarQuantity){
+        // floorMaker.call(this,floorCompany,water,salt);
+        this.cakeCompany = cakeCompanyName;
+        this.sugarQuantity = sugarQuantity;
+      }
+      cakeMaker.prototype = Object.create(floorMaker.prototype);
+      let cake = new cakeMaker("Oreo",'2.4Kg');
+      console.log(cake);
     </script>
-</body>
+  </body>
 </html>
