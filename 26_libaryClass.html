@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libary Exercise</title>
+</head>
+<body>
+    <h1>Libary Exercise Solloution</h1>
+
+    <script>
+        console.log("Welcome to my Self Made Auto Libary");
+        let date = new Date;
+        class Libary {
+            constructor(userName,bookList){
+                this.userName = userName;
+                this.bookList = bookList;
+            }
+            getBookList(){
+                if (libary.bookList.length > 0)
+                return `Available books in our libary are ${[this.bookList]}`;
+                
+                else if (libary.bookList.length == 0){
+                    return `Sorry ${this.userName} this book is not avaliable in our libary right now.`;
+                    
+                }
+            }
+            issuBook(bookName,user){
+                const bookList = this.bookList;
+                if (this.bookList.includes(`${bookName}`)){
+                    const bookList = this.bookList;
+                    let indexOfRemoveableItem = this.bookList.indexOf(bookName);
+                    // return `${indexOfRemoveableItem}`
+                    this.bookList.splice(indexOfRemoveableItem,1);
+                    return `
+                    The book ${bookName} is issued by ${user} on ${date}
+                    Thank You ${user} to take the book from our libary
+                    `;   
+                }
+                else{
+                    return `Sorry ${user} this book is not avaliable in our libary right now.`;
+                }
+            }
+            returnBook(bookName){
+                const bookList = this.bookList;
+                bookList.push(bookName);
+                return `Thank you for returning the book on time,${this.userName}`
+            }
+        }
+
+        let libary = new Libary("Udit",["Physics","coding"]);
+        // console.log(libary);
+        // let a = [4,4343,33];
+        // console.log(a.indexOf(4343));
+        // a.splice(1,1);
+        // console.log(a);
+        // console.log(a.push(33434))
+        // console.log(a);
+        // console.log(libary.bookList.length)
+    </script>
+</body>
+</html>
