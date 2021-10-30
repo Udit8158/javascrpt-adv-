@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Programming In JS</title>
+</head>
+<body>
+    <script>
+        for (let index = 0; index < 200; index++) {
+            const element = index;
+            console.log(element)
+        }
+        console.log("Next Work");   //It prints 'next work after finishing the for loop'
+
+
+        //It print the for loop after 1000 ms or 1s and the 2nd time next work is printing before.
+        //It is the introduction of the Asynchronous Programming - means system doesn't wait for compliting any operation and carry on its work.
+        setTimeout(() => {
+            for (let index = 0; index < 200; index++) {
+            const element = index;
+            console.log(element)
+        }
+        }, 1000);
+        console.log("2nd time next work");
+    </script>
+</body>
+</html>
