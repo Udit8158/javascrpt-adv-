@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise In JS</title>
+</head>
+<body>
+    <h1>Promise</h1>
+    <script>
+        // promise ---->:
+        // 1--> resolve
+        // 2--> reject 
+        // 3--> pending
+
+        function func1() {
+            return new Promise(function(resolve,reject){
+                setInterval(() => {
+                    const error = true;
+                    if (!error) {
+                        console.log("Function: Your promise has been resolved successfully");
+                        resolve();
+                    }
+                    else {
+                        console.log("Function: Your promise has not been resolved successfully");
+                        reject("Sorry not fullfild the promise");
+                    }
+                }, 3000);
+            })
+        }
+        
+        func1().then(function(){
+            console.log("Thanks Udit for resolving your promise");
+        }).catch(function(error){
+            console.log("Udit very bad bro. Reason "+error);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Problem- Like Dictionary</title>
+  </head>
+  <body>
+      <h1>My Dictionary</h1>
+      <button id="fetchBtn">Fetch Data</button>
+      <input type="text" id="searchText">
+      <div id="searchResultContainer"></div>
+      <!-- <details>This is details tag</details> -->
+    <script>
+      // Question:
+      // You have pretend to use a word api which will contain an object and you have to print definition from all the results of that word api.
+      // You have to take input from an input tag.
+      // You have to print it in the dom
+      // If you are using bootstrap then its a plus
+
+      let fetchBtn = document.getElementById('fetchBtn');
+      fetchBtn.addEventListener('click',clickFetchBtn);
+
+      function clickFetchBtn(){
+          console.log("You have just clicked the fetch data button");
+
+          const xhr = new XMLHttpRequest();
+
+          xhr.open('GET','30_wordApi.json',true);
+
+          xhr.onprogress = function(){
+              console.log('Request is underprogress');
+          }
+          
+          xhr.onload = function(){
+              console.log(this.responseText)
+          }
+          xhr.send();
+      }
+    </script>
+  </body>
+</html>
