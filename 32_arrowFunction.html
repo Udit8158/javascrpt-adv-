@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>Different type of writting style of Function</h1>
+    <script>
+
+        //Different type of writting style of Function
+
+        // M1
+        // function greet(){
+        //     console.log("Good,Morning");
+        // };
+
+        // M2
+        // const greet = function(){
+        //     console.log("Good Morning");
+        // };
+
+        // M3 Arrow function
+        // const greet = () => {
+        //     console.log("Good,Morning");
+        // };
+
+        // M4  (we can only write one line without curly brackets if function is only returning anything not console)
+        // const greet = () => "Good,Morning"
+        
+        //M5 (if you give only one argument in a function then we don't need to give parethisis)
+        let greet = name => "Good,Morning",name;
+        greet("Udit");
+    </script>
+</body>
+</html>
