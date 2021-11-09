@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Api</title>
+  </head>
+  <body>
+    <button id="fetchData">Fetch Data</button>
+    <script>
+      let fetchData = document.getElementById("fetchData");
+      fetchData.addEventListener("click", clickFetchData);
+      function clickFetchData() {
+        console.log("You have clicked");
+        url = "33_test.txt";
+        fetch(url)
+          .then((response) => {
+            return response.text();
+          })
+          .then((data) => {
+            console.log(data);
+          });
+      }
+      function jsonData() {
+        console.log("You have clicked");
+        url = "30_wordApi.json";
+        fetch(url)
+          .then((response) => {
+            return response.json();  //this is only for valid json file
+          })
+          .then((data) => {
+            console.log(data);
+          });
+      }
+
+      //For post request
+      function postData() {
+        url = "http://dummy.restapiexample.com/api/v1/create";
+        data = '{"name":"harglry347485945","salary":"123","age":"23"}';
+        params = {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: data,
+        };
+        fetch(url, params)
+          .then((response) => response.json())
+          .then((data) => console.log(data));
+      }
+    </script>
+    
+  </body>
+</html>
