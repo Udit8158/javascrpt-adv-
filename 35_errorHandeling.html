@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handeling</title>
+</head>
+<body>
+    <script>
+        //Throw a custom error
+        let a = 45;
+        // if (a != undefined){
+        //     throw new Error ("This is a number");
+        // }
+        // else{
+        //     console.log("This is not a number");
+        // }
+
+        //try catch finally block
+        try {
+            tlslkdfjlksdjl   //Try anything you give it could be an error but not show any error
+        } catch (error) {
+            console.log(error);  //print the error message as a string
+            console.log(error.name); //Print the name of the error
+            console.log(error.message);  //print the message of the error
+            console.log("This is inside try catch block");  //Print the manual message catch block is activate only if try block throw an error
+        }finally{
+            console.log("It is active irrespective of try and catch block")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+        //fetch api
+        function fetchData(){
+            const url = "https://api.github.com/users";
+            fetch(url).then((response)=>{
+                return response.json();
+            }).then((data)=>{
+                console.log(data);
+            })
+        }
+
+        //async await  (actually async returned a function as a promise)
+        async function newData(){
+            const url = "https://api.github.com/users";
+            console.log('inside the newData');
+            console.log('before response');
+            const response = await fetch(url);
+            console.log('after response');
+            const users = await response.json();
+            console.log('after user json');
+            return users;
+            console.log('after returning in newData');
+        }
+        console.log('before calling newData');
+        // console.log(newData());
+        console.log(newData().then((data)=>{
+            console.log(data);
+        }))
+        console.log('after calling newData');
+         
+    </script>
+</body>
+</html>
