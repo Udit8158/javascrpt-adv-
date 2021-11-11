@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression Function</title>
+</head>
+<body>
+    <script>
+        //Regular expression is used for searching
+        let reg = /udit/;   //This is regular expression literal in js
+        
+        // some extra flag for regular expression 
+        // reg = /udit/g;  // --> it is for global means for all occurance but it is case sensitive
+        // reg = /udit/i;  // --> it is for case insensitive but it is not reffer globally
+
+        //Printing the regular expression
+        // console.log(reg);
+        // console.log(reg.source);  //print main source of reg expression
+
+        //Initialize a string
+        let str = "This is me udit,And I want to make code with udit";
+
+        //Functions in regular expression
+
+        // 1. exec() - This  function will return an array for match or null for unmatch. 
+        let result1 = reg.exec(str);
+        // console.log(result1);  //it give first occurance 
+        result1 = reg.exec(str);
+        // console.log(result1);  //it give same first occurance without global tag and give second occurance with global tag
+
+        //itreate the result1 array
+        // console.log(result1.input)  //it give the input of exec() function [here 'str']
+        // console.log(result1.index)  //it give the index of our desired search
+
+        // 2. test()  - This function returns true for the presence of search item and false for the absence for the item
+        let result2 = reg.test(str);
+        // console.log(result2);  //It is not working properly for global tag
+
+        //3. match() - This function will return an array of results or null  (almost same work as exec()) but for global tag it return an array of all matches
+        // let result3 = reg.match(str); //it is wrong
+        let result3 = str.match(reg); //it is right (ulta here)
+        // console.log(result3);
+
+        //4. search() - This function returns the index of first match or else return -1
+        let result4 = str.search(reg); //[here also opposite syntax]
+        // console.log(result4);  //it only prints the first occurance also with the 'global' tag
+
+        //5. replace() - This replace the all elements (if no global tag then only first occurance)
+        let result5 = str.replace(reg,"Harry");
+        // console.log(result5);
+    </script>
+</body>
+</html>
