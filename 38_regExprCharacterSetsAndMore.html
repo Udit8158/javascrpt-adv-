@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reg Expr - CharacterSets and More</title>
+  </head>
+  <body>
+    <script>
+      //Character Sets - For this we use []
+      let reg = /ud[jko]t/;  //means in that posision holds j,k or o
+      reg = /ud[a-z]t/;  // means a to z
+      reg = /ud[^ait]t/;//means not a,i,or t
+      reg = /ud[4-59][A-X]/; // we can use numbers and multiple sets
+      
+      // Quantifiers - we use {}
+      reg = /u{3}d{5,7}it/  //means 3 times 'u' and 5 to 7(means 5,6,7) times d
+      
+      // Groupings - we use ()
+      reg = /(ud){2}([ijs]){3}t/
+      
+      let str = "I am ududiiit";  
+      //Test the result
+      if (reg.test(str)) {
+        console.log(`The "${str}" consist the '${reg.source}'`);
+      } else {
+        console.log(`The "${str}" not consist the '${reg.source}'`);
+      }
+    </script>
+  </body>
+</html>

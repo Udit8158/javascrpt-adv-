@@ -9,8 +9,25 @@
   <body>
     <script>
       let reg = /udit/;
+      
+      // some metacharacter symbols for regular expression 
+      reg = /^udit/;  //means expression strart with this [here it is false]
+      reg = /udit$/;  //means expression ends withe this  [here it is true]
+      reg = /u.it/;   //'.' means here any one character can be adjust
+      reg = /u*t/;   //means here 0 or more character can be adjust
+      reg = /u?d?d?it?s?/ //'?' after character  means the character is optional [here the value is ture]
+      reg = /u\*dit/   //'\' is used as escape sequence character means here '*' is not work as the metacharacter.
+
       //Initialize a string
-      let str = "This is me udit,And I want to make code with udit";
+      let str = "This is me udit";
+
+      //cheecking the metacharcter's result in the if-else conditions
+      if (reg.test(str)){
+        console.log(`The "${str}" consist the '${reg.source}'`);
+      }
+      else{
+        console.log(`The "${str}" not consist the '${reg.source}'`)
+      }
     </script>
   </body>
 </html>
