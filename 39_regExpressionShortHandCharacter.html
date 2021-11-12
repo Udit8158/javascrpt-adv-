@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShortHand Characters</title>
+</head>
+<body>
+    <script>
+        //Chracter Class
+        let reg = /\wit/; //'\w' means word character - means  '_' or alphabe or numbers [this take only one(here 'dit')]
+        reg = /\w+t/;     //'\w+' means more than one word character here 'udit'
+        reg = /\Wt/;      //'\W' means non word character (single)
+        reg = /\W+t/;     //'\W+' means more than one non word character
+        reg = /\dt/;      //'\d' means one digit
+        reg = /\d+t/;     //'\d+' means more than one digit
+        reg = /\Dt/;      //'\D' means non digit (singular)
+        reg = /\D+t/;     //'\D+' means more than one non digit
+        reg = /\su/;      //'\s' means one white space
+        reg = /\s+u/;     //'\s+' means more than one white space
+        reg = /\Su/;      //'S' means one non white space character
+        reg = /\S+u/;     //'S+' means more than one non white space character
+
+        //Assertions
+        reg = /u(?=d)/;  //d after u
+        reg = /u(!d)/;   //not d after u
+        
+        //Define string
+        let str = "This is me udi453t";
+
+        console.log(reg.exec(str));
+        if (reg.test(str)){
+            console.log(`The ${str} consist ${reg.source}`);
+        }
+        else{
+            console.log(`The ${str} not consist ${reg.source}`);
+        }
+    </script>
+</body>
+</html>
