@@ -13,16 +13,19 @@
   <body>
       <!-- Alerts  -->
     <div class="alert alert-success" id="success" role="alert">
-        A simple success alert—check it out!
+        You submitted the form successfully.Thank You.
+      </div>
+      <div class="alert alert-danger" id="failureSubmit" role="alert">
+        Cheeck the process,your form cannot be submitted.
       </div>
       <div class="alert alert-danger" id="failureName" role="alert">
-        Please enter a valid name
+        Please enter a valid name,your form cannot be sumitted.
       </div>
       <div class="alert alert-danger" id="failureEmail" role="alert">
-        Please enter a valid email
+        Please enter a valid email,your form cannot be sumitted.
       </div>
       <div class="alert alert-danger" id="failurePhone" role="alert">
-        Please enter a valid phone number
+        Please enter a valid phone number,your form cannot be sumitted.
       </div>
 
       <!-- Form  -->
@@ -42,10 +45,10 @@
         <!-- user address  -->
       <div class="mb-3 mx-5">
         <label for="exampleFormControlTextarea1" class="form-label">Enter Your Address</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="adress" rows="3"></textarea>
       </div>
       <!-- Branch Selector -->
-      <select class="form-select form-select-sm mx-5" aria-label=".form-select-sm example">
+      <select class="form-select form-select-sm mx-5" id="branchSelector" aria-label=".form-select-sm example">
         <option selected>Select Your Prefered Branch</option>
         <option value="1">CS</option>
         <option value="2">ECC</option>
