@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Collage Admission Form</title>
+  </head>
+  <body>
+      <!-- Alerts  -->
+    <div class="alert alert-success" id="success" role="alert">
+        A simple success alert—check it out!
+      </div>
+      <div class="alert alert-danger" id="failureName" role="alert">
+        Please enter a valid name
+      </div>
+      <div class="alert alert-danger" id="failureEmail" role="alert">
+        Please enter a valid email
+      </div>
+      <div class="alert alert-danger" id="failurePhone" role="alert">
+        Please enter a valid phone number
+      </div>
+
+      <!-- Form  -->
+      <div class="formContainer my-4">
+          <h3 class="mx-5 ">Fill Our Collage Admission Form</h3>
+          <form class="row g-3 needs-validation" novalidate>
+          <!-- UserName  -->
+      <div class="mb-3 mx-5">
+          <label for="exampleFormControlInput1" class="form-label">Enter Your Name</label>
+          <input type="email" class="form-control" id="userName">
+        </div>
+        <!-- email address  -->
+        <div class="mb-3 mx-5">
+          <label for="exampleFormControlInput1" class="form-label">Enter Your Email Address</label>
+          <input type="text" class="form-control" id="email" placeholder="name@example.com">
+        </div>
+        <!-- user address  -->
+      <div class="mb-3 mx-5">
+        <label for="exampleFormControlTextarea1" class="form-label">Enter Your Address</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <!-- Branch Selector -->
+      <select class="form-select form-select-sm mx-5" aria-label=".form-select-sm example">
+        <option selected>Select Your Prefered Branch</option>
+        <option value="1">CS</option>
+        <option value="2">ECC</option>
+        <option value="3">IT</option>
+      </select>
+      <!-- User Phone Number  -->
+      <div class="mb-3 mx-5 ">
+        <label for="exampleFormControlInput1" class="form-label">Enter Your Phone Number</label>
+        <input type="text" class="form-control" id="phone">
+      </div>
+      <!-- submit button  -->
+    </form>
+    <button class="btn btn-primary mx-5" type="submit" id="submitBtn">Submit form</button>  
+    </div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
