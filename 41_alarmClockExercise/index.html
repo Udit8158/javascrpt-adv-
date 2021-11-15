@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Clock</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+      <h1>My Clock</h1>
+      <p>The time is <span id="para"></span></p>
+      <div id="clock">
+          <div id="hourHand"></div>
+          <div id="minuteHand"></div>
+          <div id="secondHand"></div>
+        </div>
+        <div class="alarmContainer">
+            <h1>Set an alarm</h1>
+            <form action="no.php">
+            <label for="appt">Select a time:</label>
+            <input type="time" id="alarm" name="appt" />
+            <button id="alarmBtn">Set Alarm</button>
+        </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
