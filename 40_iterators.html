@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterators</title>
+  </head>
+  <body>
+    <script>
+      console.log("welcome");
+
+      //Let's start itreators
+
+      //Making itreator function
+      function myArrItreator(arrayName) {
+        let nextIndex = 0;
+        // This itreator func return an object
+        return {
+          next: function () {
+            if (nextIndex < arrayName.length) {
+              // We will return below obj
+              // console.log(arrayName);
+              // console.log(arrayName.length);
+              return {
+                value: arrayName[nextIndex++], //adding '++' to make it for all upcoming elements
+                done: false,
+              };
+              // console.log(nextIndex)
+            } else {
+              //else return this success obj
+              return {
+                done: true,
+              };
+            }
+          },
+        };
+      }
+
+      //run the itreator
+      const myArr = ["js", "c++", "python", "java"];
+      // console.log(myArr);
+
+      // myArr.forEach((e)=>{
+      //     console.log(e);
+      // })
+
+      //This is only happen when you write it in this way
+      const lang = myArrItreator(myArr);
+
+      console.log(lang.next());
+      console.log(lang.next());
+      console.log(lang.next());
+      console.log(lang.next());
+      console.log(lang.next()); //This returns true
+    </script>
+  </body>
+</html>

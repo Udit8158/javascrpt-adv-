@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    <script>
+        //Generator is used to store values on the fly to make programme more efficient
+        //Basic generator syntax
+        function* arrGenerator (){
+            yield 0
+            yield 1
+            yield 2
+            yield 3
+        }
+        let gen = arrGenerator()
+        console.log(gen.next());
+        console.log(gen.next());
+        console.log(gen.next());
+        console.log(gen.next());
+        console.log(gen.next());
+
+        //Using loop in generator
+
+        function* loopGen(){
+            let i = 0;
+            while (true){
+                yield i++
+            }
+        }
+        let loopgen = loopGen();
+        console.log(loopgen.next().value)
+    </script>
+</body>
+</html>
