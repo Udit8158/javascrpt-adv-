@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In or For of</title>
+</head>
+<body>
+    <script>
+
+        //Itreating an array
+        let myArr = ['python','js','c','java'];
+        console.log("*****Usingn traditional for loop******");
+        // Itreate array by traditional for loop 
+        for (let index = 0; index < myArr.length; index++) {
+            const element = myArr[index];
+            console.log(element);
+        }
+        console.log("*****Usingn for-in loop******");
+        //Using for-in loop
+        for (const key in myArr) {
+                const element = myArr[key];
+                console.log(element)
+        }
+        console.log("*****Usingn for-of loop******")
+        //usinng for-of loop
+        for (const iterator of myArr) {
+            console.log(iterator)
+        }
+
+        //Itreatin an object
+        let myObj = {
+            name:"udit",
+            age:17,
+            passion:"coding"
+        }
+        // console.log(myObj.name)
+        console.log("*****Usingn traditional for loop******")
+        // console.log(Object.keys(myObj))  => this return all keys in an array form
+        //Using traditional for loop   (not a good way to do that)
+        for (let index = 0; index < Object.keys(myObj).length; index++) { //also use for value
+            const element = Object.keys(myObj)[index];
+            console.log(element);
+        }
+
+        console.log("*****Usingn for-in loop******");
+        
+        //Using for-in loop  (printing the values)
+        for (const key in myObj) {
+            
+            console.log(myObj[key])
+        }
+        //printing the key
+        for (const key in Object.keys(myObj)) {
+                const element = Object.keys(myObj)[key];
+            console.log(element)    
+        }
+
+
+    </script>
+</body>
+</html>

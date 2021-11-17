@@ -68,7 +68,7 @@ email.addEventListener('blur',()=>{
 // 3.Phone
 phone.addEventListener('blur',()=>{
     // console.log("Blur event fired");
-    let regForPhone = /\+91[0-9]{10}/;
+    let regForPhone = /\+91[0-9]{10}^[a-z]^[A-Z]/;
     let strForPhone = phone.value;
 
     console.log(regForPhone,strForPhone);
