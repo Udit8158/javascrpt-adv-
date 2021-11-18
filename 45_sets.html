@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sets in JS</title>
+</head>
+<body>
+    <script>
+        //set is used to store unike vale 
+        let mySet = new Set();  //initialize an empty set
+        console.log(mySet);
+        //Adding elements on a set
+        mySet.add(4);
+        mySet.add(4);  //Don't repeat same 
+        mySet.add("Udit");
+        mySet.add(true);
+        mySet.add(null);
+        mySet.add({company:"GOOGLE"});
+        console.log(mySet);
+
+        // Method 2 to define a set 
+        // let mySet2 = new Set([3,5,3,534]);
+        // console.log(mySet2);
+
+        //Removing element form set
+        mySet.delete(null);
+        console.log(mySet);
+        console.log(mySet.size);  //telling the size of the set
+
+        //Cheecking an element has or not in the set
+        console.log(mySet.has(4));  //return true
+        console.log(mySet.has(44)); //return false
+
+        //Using loop on set 
+        for (let item of mySet){
+            console.log("Items of the set are",item);
+        }
+        mySet.forEach((item)=>{
+            console.log("Another time the items are",item);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps in JS</title>
+</head>
+<body>
+    <script>
+        //Maps is used for store any type of kye-value pair in javascript
+        let myObj = {
+            obj : {
+                name: "Udit"
+            },
+            func : ()=>{
+                return "This is an function"
+            }
+        }
+        // console.log(myObj); //It is done by simple object 
+
+        //Now just see maps
+        let myMap = new Map();  //Initialize the empty map
+        //Setting the keys and values of the map
+        myMap.set("name","Udit");
+        myMap.set("obj",{name:"Udit"});
+        myMap.set("func",()=>{return "This is an empty function"});
+        
+        console.log(myMap);
+
+        //Getting the values
+        console.log(myMap.get("name"));
+        console.log(myMap.size);  //getting the size of the map
+        
+        console.log(myMap.keys()) //Getting all keys in an obj format
+        console.log(myMap.values()) //Getting all values in an obj format
+
+        //Using loop on map
+        for (let [key,value] of myMap){  //get keys and values 
+            console.log(`The value of ${key} is ${value}`);
+        }
+        for (let key of myMap.keys()){  //get only the keys
+            console.log("Only the keys are",key);
+        }
+        for (let value of myMap.values()){
+            console.log("Only the values are",value);
+        }
+
+        //Using for each loop
+        myMap.forEach((values,keys) => {
+            console.log(`The value of ${keys} is ${values}`)
+        });
+
+        //Forming array from map
+        let myMapArr = Array.from(myMap);
+        console.log(myMapArr);
+        console.log(myMapArr[0]);  //Access the array
+
+        //Forming the array from map keys
+        let myMapKeyArr = Array.from(myMap.keys());
+        console.log(myMapKeyArr);
+
+        //Forming the array from map values
+        let myMapValueArr = Array.from(myMap.values());
+        console.log(myMapValueArr)
+
+        //using loop from array
+        myMapArr.forEach((e)=>{
+            console.log(e)
+        })
+        </script>
+</body>
+</html>
