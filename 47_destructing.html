@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destruction</title>
+</head>
+<body>
+    <script>
+        // let [a,b] = [3,4];
+        // console.log(a,b);
+
+        // let [a,b,c] = [5,67,43,3525,43534,456,6432,453];
+        // console.log(a,b,c)//here a,b,c is only 5,67,and 43
+
+        // let [a,b,c,...d] = [4,5,3,4,5,3,3,67,765];
+        // console.log(a,b,c,d)  //here a,b,c,d are 4,5,3,and d is rest of the array
+
+        // let {a,b,c} = {name:'Udit',age:17,hobby:"Coding"};
+        // console.log(a,b,c);  //this is wrong
+
+
+        ({a,b,c} = {a:"udit",b:43,c:33});
+        console.log(a,b,c);
+    </script>
+</body>
+</html>

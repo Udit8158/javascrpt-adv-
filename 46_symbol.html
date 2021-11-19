@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbol</title>
+</head>
+<body>
+    <script>
+        //Symbol is used to generate unique premetive datatypes
+        let sym1 = Symbol("This is symbol");
+        console.log(sym1);  //The type is symbol
+        let sym2 = Symbol("This is symbol");
+        console.log(sym2);
+
+        console.log(sym1===sym2);  //return false means symbol is unique
+        console.log(4===4);  //return ture (means without symbol every premetitve datatypes are not unique)
+    </script>
+</body>
+</html>
