@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+</head>
+<body>
+    <div id="clock" style="font-size: 60px;margin: 0px 600px;margin-top: 150px;">
+    
+    </div>
+    <script>
+        console.log("Displaying the clock");
+        //Grab the elements
+        const clock = document.getElementById('clock');
+        function showTime(){
+            //Initialize the variables
+            let currentDate = new Date();
+            let currentHour = currentDate.getHours();
+            let currentMinute = currentDate.getMinutes();
+            let currentSecond = currentDate.getSeconds();
+            
+            //Add extra 0 for single digit character in time
+            //For hour
+            if (currentHour<10){
+                currentHour = "0" + currentHour;
+            }
+            else {
+                currentHour = currentHour;
+            }
+            //For minute
+            if (currentMinute<10){
+                currentMinute = "0" + currentMinute;
+            }
+            else {
+                currentMinute = currentMinute;
+            }
+            //For second
+            if (currentSecond<10){
+                currentSecond = "0" + currentSecond;
+            }
+            else {
+                currentSecond = currentSecond;
+            }
+            //Convert the clock into the 12-hour format
+            if (currentHour>=12){
+                currentHour = currentHour - 12;
+            }
+            else{
+                currentHour = currentHour;
+            }
+            //Now define the time string
+            let timeStr = `${currentHour}:${currentMinute}:${currentSecond}`;
+
+            //Adding the am and pm
+            if (currentHour >= 12){
+                timeStr = `${currentHour}:${currentMinute}:${currentSecond} PM`
+            }
+            else{
+                timeStr = `${currentHour}:${currentMinute}:${currentSecond} AM`
+            }
+            //Manupulate the
+            clock.innerHTML = `${timeStr}`;
+        }
+        //Setting interval for 1s means run the function after every second
+        setInterval(() => {
+            showTime()
+        },1000);
+    </script>
+</body>
+</html>
