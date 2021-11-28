@@ -10,7 +10,7 @@ let screenValue = "";
 for (item of buttons) {
     item.addEventListener('click',(e)=>{
         // console.log('clicked');
-        var audio = new Audio("/projects/07_MyCalculator/clickSound.wav")
+        var audio = new Audio("/projects/07_MyCalculator/clickSound.wav");
         audio.play();
         
         //Grab the inner text of the target button
