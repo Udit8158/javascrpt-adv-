@@ -27,6 +27,18 @@
         myArray.splice(1,4);   //it remove 1 th index to 4th index remove 
         console.log(myArray);
 
+        //Access every element of array without using by using .every method
+
+        let cheeckEven = (num) => {
+            return num%2 === 0;
+        } 
+
+        let newArr = Array(2,4,6);
+        let resultOfEven = newArr.every(cheeckEven);
+        console.log(resultOfEven);  //It returns true because all of the element of the array is even
+
+        //If any of the element of the array was not even then the result was false.
+
         //Objects 
         let myObject = {
             name : "Udit",
