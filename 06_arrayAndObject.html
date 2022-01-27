@@ -1,53 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Array And Object</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        // Array 
-        myArray = [1,4,"Udit",[3,4],53];
-        console.log(myArray);
-        console.log(myArray.length); //printing the length of array
-        let newArray = new Array(4,5,3);
-        console.log(newArray);        //Also we can make array by this way 
+      // Array
+      myArray = [1, 4, "Udit", [3, 4], 53];
+      console.log(myArray);
+      console.log(myArray.length); //printing the length of array
+      let newArray = new Array(4, 5, 3);
+      console.log(newArray); //Also we can make array by this way
 
-        //Array methods 
-        myArray.push(34);   //add on last of array
-        console.log(myArray);
-        myArray.unshift(23);  //add on first of array
-        console.log(myArray);
-        myArray.pop();  //remove the last element
-        console.log(myArray); 
-        myArray.shift();   //remove the first element
-        console.log(myArray);
-        myArray.splice(1,4);   //it remove 1 th index to 4th index remove 
-        console.log(myArray);
+      //Array methods
+      myArray.push(34); //add on last of array
+      console.log(myArray);
+      myArray.unshift(23); //add on first of array
+      console.log(myArray);
+      myArray.pop(); //remove the last element
+      console.log(myArray);
+      myArray.shift(); //remove the first element
+      console.log(myArray);
+      myArray.splice(1, 4); //it remove 1 th index to 4th index remove
+      console.log(myArray);
 
-        //Access every element of array without using by using .every method
+      //Access every element of array without using by using .every method
 
-        let cheeckEven = (num) => {
-            return num%2 === 0;
-        } 
+      let cheeckEven = (num) => {
+        return num % 2 === 0;
+      };
 
-        let newArr = Array(2,4,6);
-        let resultOfEven = newArr.every(cheeckEven);
-        console.log(resultOfEven);  //It returns true because all of the element of the array is even
+      //Using fill and filter method
 
-        //If any of the element of the array was not even then the result was false.
+      let anotherArr = Array(1, 2, 3, 4, 5, 6);
+      // anotherArr.fill(0); //It fills all value of arr with 0
+      // anotherArr.fill(0,2,5);  //It fill 2,3,4 idexes with 0
+      let newFilteredArr = anotherArr.filter((e) => e > 2); //It filter array with greater than 2 values  (Using callbacks)
+      newFilteredArr = anotherArr.filter((e) => e % 2 === 0); //It print only the even numbers
+      // console.log(anotherArr);
+      console.log(newFilteredArr);
 
-        //Objects 
-        let myObject = {
-            name : "Udit",
-            company : "Google",
-            array : [2,4,5,12],
-        }
-        console.log(myObject);
-        console.log(myObject.name)   //acess the elements of object
-        console.log(myObject['name']);   // Same result
+      //In Programming start is always inclusive and end is always exclusive.
+
+
+
+      let newArr = Array(2, 4, 6);
+      let resultOfEven = newArr.every(cheeckEven);
+      console.log(resultOfEven); //It returns true because all of the element of the array is even
+
+      //If any of the element of the array was not even then the result was false.
+
+      //Objects
+      let myObject = {
+        name: "Udit",
+        company: "Google",
+        array: [2, 4, 5, 12],
+      };
+      console.log(myObject);
+      console.log(myObject.name); //acess the elements of object
+      console.log(myObject["name"]); // Same result
     </script>
-</body>
+  </body>
 </html>
